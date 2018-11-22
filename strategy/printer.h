@@ -11,9 +11,7 @@ public:
 
   // Free memory after usage
   ~Printer() {
-    if (m_strategy != NULL) {
-      delete m_strategy;
-    }
+    delete m_strategy;
   }
 
   /**
@@ -37,14 +35,14 @@ public:
     /** When replacing strategy, release the memory of
      * the previous strategy object
      */
-    if (m_strategy != NULL) {
+    if (m_strategy != nullptr) {
       delete m_strategy;
     }
     m_strategy = a_strategy;
   }
 
 
-  Strategy* m_strategy = NULL;
+  Strategy* m_strategy = nullptr;
 };
 
 
