@@ -6,6 +6,14 @@
 
 class Newspaper {
 public:
+  /**
+   * The instantiation of the factory objects is encapsulated
+   * by the AbstractFactory. The Newspaper class, does not need
+   * to know, which factory exists as long as they follow the
+   * interface. Adding other kind of newspapers, does not affect
+   * this class, so it does not have to be maintained. We only
+   * need to pass the correct factory in the main function.
+   */
   Newspaper(AbstractFactory* factory) {
     m_heading = factory->CreateHeading();
     m_news = factory->CreateNews();
