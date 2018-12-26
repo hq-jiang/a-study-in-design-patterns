@@ -18,7 +18,7 @@
  * composite structur. If the recipient is a Leaf, then the request is handled
  * directly. If the recipient is a Composite, then it usually forwards requests
  * to its child components, possibly performing additional operations before
- * and/or after forwarding." - Gamma Et al.
+ * and/or after forwarding." - Gamma et al.
  */
 
 class Composite {
@@ -67,6 +67,7 @@ public:
   }
 
 private:
+  // For explicit leafs, some of the methods can moved to private
   using Composite::Add;
   using Composite::GetChild;
 }; // class Heading
