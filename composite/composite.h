@@ -4,12 +4,22 @@
 #include <iostream>
 #include <vector>
 
-/* The composite pattern gives flexibility in how the newspaper
- * is structured. In contrast to abstract factory where we
- * also created a newspaper class, the structure was fixed.
- *
- */
 
+/**
+ * @brief The Composite class
+ *
+ * Allows one to structure classes according to a tree
+ * structure. This makes it simple for the client, since
+ * he can treat the single classes and their composite
+ * uniformly. A composite can be easily extended by
+ * adding new classes to the hierarchy.
+ *
+ * "Clients use the Component class interface to interact with objects in the
+ * composite structur. If the recipient is a Leaf, then the request is handled
+ * directly. If the recipient is a Composite, then it usually forwards requests
+ * to its child components, possibly performing additional operations before
+ * and/or after forwarding." - Gamma Et al.
+ */
 
 class Composite {
 public:
@@ -32,6 +42,11 @@ public:
   std::vector<Composite*> m_children;
 }; // class Composite
 
+
+/* Note: The composite pattern gives flexibility in how the newspaper
+ * is structured. In contrast, we also created a newspaper class
+ * for the abstract factory and there the structure was fixed.
+ */
 
 class Newspaper : public Composite {
 public:
