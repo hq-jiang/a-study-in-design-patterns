@@ -4,4 +4,6 @@ add_subdirectory(strategy)
 add_subdirectory(abstract_factory)
 add_subdirectory(singleton)
 add_subdirectory(composite)
-
+add_subdirectory(bridge)
+add_subdirectory(observer)
+add_subdirectory(adapter)
