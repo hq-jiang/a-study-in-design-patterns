@@ -4,6 +4,12 @@
 #include <iostream>
 #include "movie.h"
 
+/**
+ * @brief The Book class
+ *
+ * This class implements the interface - the Print() function -
+ * which is expected by the Printer class.
+ */
 class Book {
 public:
 
@@ -27,6 +33,16 @@ public:
   }
 };
 
+
+/**
+ * @brief The AdaptedMovie class
+ *
+ * In order to use the Movie class as a Book, we must deliver a Print()
+ * function. We use the "object" adapter pattern, so we instantiate the
+ * adaptee (to be adapted class) as a member and wrap the Subtitles() function
+ * with Print(). This makes the movie class usable in Printer without changing
+ * the Movie class itself.
+ */
 class AdaptedMovie : public Book {
 public:
   AdaptedMovie() : m_movie(new Movie()) {}

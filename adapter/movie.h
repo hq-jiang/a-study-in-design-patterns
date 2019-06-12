@@ -3,6 +3,16 @@
 
 #include <iostream>
 
+/**
+ * @brief The Movie class
+ *
+ * This class is very different from the Book class and is
+ * therefore not compatible to the Printer class which expects
+ * a Print() function implemented.
+ * If we didn't have access to the source code of the Movie class,
+ * for example if it was part of a external library, we wouldn't be
+ * able to use it. Unless, we applied the adapter pattern (see Book class).
+ */
 class Movie {
 public:
   void Show() {
